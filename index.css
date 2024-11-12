@@ -34,16 +34,15 @@ header{
 
 .insert-section{
     background-color: #EF8793;
-    text-align: center;
     padding: 25px;
 }
 
 input {
     font-size: 18px;
     font-family: inherit;
-    width: 90%;
+    width: 100%;
     padding: 10px;
-    margin: 0 auto;
+    box-sizing: border-box;
 }
 
 button {

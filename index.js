@@ -6,14 +6,20 @@ let list = []
 
 saveBtn.addEventListener("click", function(){
     list.push(inputEl.value)
-    let listItem = ""
-    for (let i = 0; i < list.length; i++) {
-      listItem += `<li>${list[i]}</li>`
-    }
-    listEl.innerHTML = listItem
+    renderList()
     inputEl.value = ""
 })
 
 deleteBtn.addEventListener('dblclick', function(){
     
 })
+
+function renderList(){
+  let listItems = ""
+  for (let i = 0; i < list.length; i++) {
+    listItems += `
+    <li>${list[i]}</li>
+    `
+  }
+  listEl.innerHTML = listItems
+}
