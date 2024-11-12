@@ -1,5 +1,8 @@
-/*
-1 meter = 3.281 feet
-1 liter = 0.264 gallon
-1 kilogram = 2.204 pound
-*/
+const saveBtn = document.getElementById("save-btn")
+const inputEl = document.getElementById("input-el")
+const listEl = document.getElementById("list-el")
+
+saveBtn.addEventListener("click", function(){
+    listEl.innerHTML += `<li>${inputEl.value}</li>`
+    inputEl.value = ""
+})
