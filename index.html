@@ -1,13 +1,29 @@
 <html>
     <head>
         <link rel="stylesheet" href="index.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap" rel="stylesheet">
     </head>
     <body>
-        <h1>Einkaufsliste</h1>
-        <img class="cat-image" src="images/cat_trolley.png" alt="cute cat sitting in a trolley">
-        <input>
-        <button id="save-btn">SAVE</button>
-        <button id="delete-btn">DELETE</button>
+        <div class="container">
+
+            <header>
+                <img class="cat-image" src="images/cat_trolley.png" alt="cute anime cat sitting in a trolley">
+                <h1>Einkaufsliste</h1>
+            </header>
+
+           <section class="input">
+               <input placeholder="Bananen">
+           </section>
+           
+           <section class="buttons">
+                <button id="save-btn">SAVE</button>
+                <button class="inverse" id="delete-btn">DELETE</button>
+           </section>
+
+        </div>
+       
         <script src="index.js"></script>
     </body>
 </html>
