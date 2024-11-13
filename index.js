@@ -7,7 +7,7 @@ const itemsFromLocalStorage = JSON.parse( localStorage.getItem("Einkaufsliste") 
 
 if (itemsFromLocalStorage) {
     list = itemsFromLocalStorage
-    renderList()
+    render(list)
 }
 
 
@@ -15,20 +15,20 @@ saveBtn.addEventListener("click", function(){
     list.push(inputEl.value)
     inputEl.value = ""
     localStorage.setItem("Einkaufsliste", JSON.stringify(list))
-    renderList()
+    render(list)
 })
 
 deleteBtn.addEventListener('dblclick', function(){
     localStorage.clear()
     list = []
-    renderList()
+    render(list)
 })
 
-function renderList(){
+function render(arr){
   let listItems = ""
-  for (let i = 0; i < list.length; i++) {
+  for (let i = 0; i < arr.length; i++) {
     listItems += `
-    <li>${list[i]}</li>
+    <li>${arr[i]}</li>
     `
   }
   listEl.innerHTML = listItems
