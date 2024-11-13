@@ -3,15 +3,25 @@ const inputEl = document.getElementById("input-el")
 const listEl = document.getElementById("list-el")
 const deleteBtn = document.getElementById("delete-btn")
 let list = []
+const itemsFromLocalStorage = JSON.parse( localStorage.getItem("Einkaufsliste") )
+
+if (itemsFromLocalStorage) {
+    list = itemsFromLocalStorage
+    renderList()
+}
+
 
 saveBtn.addEventListener("click", function(){
     list.push(inputEl.value)
-    renderList()
     inputEl.value = ""
+    localStorage.setItem("Einkaufsliste", JSON.stringify(list))
+    renderList()
 })
 
 deleteBtn.addEventListener('dblclick', function(){
-    
+    localStorage.clear()
+    list = []
+    renderList()
 })
 
 function renderList(){
